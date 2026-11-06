@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Jewelry Store</title>
+<style>
+    html, body { height: 100%; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f8f9fa; }
+    header { background-color: #1a1a1a; color: #ffffff; padding: 20px 40px; }
+    .container { min-height: calc(100vh - 80px); width: 100%; padding: 40px; box-sizing: border-box; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .product-card { background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; text-align: center; }
+    .product-image { width: 80%; height: 500px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; }
+    .product-title { font-size: 1.4rem; font-weight: bold; margin-bottom: 8px; }
+    .product-price { color: #28a745; font-size: 1.2rem; font-weight: bold; margin-bottom: 15px; }
+    .btn-view { display: inline-block; background-color: #1a1a1a; color: #ffffff; padding: 10px 24px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Luxe Jewelry</h1>
+    </header>
+
+    <div class="container">
+        <h2>Featured Collection</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400" alt="Gold Diamond Ring" class="product-image">
+                <div class="product-title">Gold Diamond Ring</div>
+                <div class="product-price">$150</div>
+                <a href="/ring" class="btn-view">View Details</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400" alt="tom Pearl Necklace" class="product-image">
+                <div class="product-title">silver Pearl Necklace</div>
+                <div class="product-price">$250</div>
+                <a href="/necklace" class="btn-view">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
