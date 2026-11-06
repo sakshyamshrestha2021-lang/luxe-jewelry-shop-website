@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Diamond Ring - Luxe Jewelry</title>
+ <style>
+    html, body { height: 100%; margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #f8f9fa; }
+    header { background-color: #1a1a1a; color: #ffffff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .back-link { color: #ffffff; text-decoration: none; font-weight: bold; }
+    .container { min-height: calc(100vh - 80px); width: 100%; padding: 50px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; gap: 40px; background-color: #ffffff; border-top: 1px solid #e0e0e0; }
+    .product-image { width: 400px; height: 400px; object-fit: cover; border-radius: 8px; }
+    .product-info { max-width: 500px; display: flex; flex-direction: column; }
+    .product-title { font-size: 2rem; margin-bottom: 10px; }
+    .product-price { color: #28a745; font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; }
+    .product-desc { color: #555555; line-height: 1.6; margin-bottom: 25px; font-size: 1.1rem; }
+    .btn-buy { background-color: #28a745; color: white; padding: 14px 28px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1.1rem; }
+    .btn-buy:hover { background-color: #218838; }
+</style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="back-link">&larr; Back to Shop</a>
+        <h1>Luxe Jewelry</h1>
+    </header>
+
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500" alt="Gold Diamond Ring" class="product-image">
+        
+        <div class="product-info">
+            <h2 class="product-title">Gold Diamond Ring</h2>
+            <div class="product-price">$150</div>
+            <p class="product-desc">Elegant 18k gold band with a fine brilliant-cut central diamond.</p>
+            
+            <form action="/checkout" method="POST">
+                <input type="hidden" name="item_name" value="Gold Diamond Ring">
+                <input type="hidden" name="price" value="150">
+                <button type="submit" class="btn-buy">Buy Now</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
