@@ -20,4 +20,4 @@ def checkout():
     return render_template("checkout.html")
           
 
-app.run(host="0.0.0.0", port=80,debug=True)
+app.run(host="0.0.0.0", port=5000)
