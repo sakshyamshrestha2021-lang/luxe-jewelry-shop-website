@@ -1,5 +1,5 @@
 from flask import Flask, render_template,request
-import time as t
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,13 +13,16 @@ def ring():
 @app.route("/necklace")
 def necklace():
     return render_template("necklace.html")
-
-@app.route("/checkout",methods=["POST"])
+PRODUCTS = {"Gold Ring": 120, "Silver Necklace": 80}
+@app.route("/checkout", methods=["POST"])
 def checkout():
-    items = request.form.get("item_name")
-    price = request.form.get("price", "0")
-    print(f"product : {items}")
-    print(f"price : {price}")
-    return render_template("checkout.html")
+    item = request.form.get("item_name")
+    price = PRODUCTS.get(item)
+    if price is None:
+        return "Unknown item", 400
+    print(f"product : {item}")
+    print(f"product : {price}")
+    return render_template("checkout.html", item=item, price=price)
 
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+   app.run(host="0.0.0.0", port=5000)
