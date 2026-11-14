@@ -13,7 +13,7 @@ def ring():
 @app.route("/necklace")
 def necklace():
     return render_template("necklace.html")
-PRODUCTS = {"Gold Ring": 120, "Silver Necklace": 80}
+PRODUCTS = {"Gold Ring": 250, "Silver Necklace": 80}
 @app.route("/checkout", methods=["POST"])
 def checkout():
     item = request.form.get("item_name")
